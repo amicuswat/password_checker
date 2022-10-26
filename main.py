@@ -31,22 +31,19 @@ def is_very_long(password):
 def main():
     password = input('Введите пароль: ')
 
+    checks = [
+        has_digits,
+        is_very_long,
+        has_letters,
+        has_upper_letters,
+        has_lower_letters
+    ]
+
     score = 0
 
-    if has_digits(password):
-        score += 2
-
-    if is_very_long(password):
-        score += 2
-
-    if has_letters(password):
-        score += 2
-
-    if has_upper_letters(password):
-        score += 2
-
-    if has_lower_letters(password):
-        score += 2
+    for func in checks:
+        if func(password):
+            score += 2
 
     print(f'Рейтин пароля: {score}')
 
