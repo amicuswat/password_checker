@@ -13,10 +13,17 @@ def is_very_long(password):
 
 
 def main():
-    password = input('Введите пароль:')
+    password = input('Введите пароль: ')
 
-    print(has_digits(password))
-    print(is_very_long(password))
+    score = 0
+
+    if has_digits(password):
+        score += 2
+
+    if is_very_long(password):
+        score += 2
+
+    print(f'Рейтин пароля: {score}')
 
 
 if __name__ == "__main__":
