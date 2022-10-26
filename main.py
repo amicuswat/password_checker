@@ -8,10 +8,11 @@ def main():
     else:
         print('Короткий')
 
-    if password.isdigit():
-        print('Цифра')
-    else:
-        print('Буква')
+    for letter in password:
+        if letter.isdigit():
+            print(f'{letter} - Цифра')
+        else:
+            print(f'{letter} - Буква')
 
 
 if __name__ == "__main__":
