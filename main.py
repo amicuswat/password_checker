@@ -5,7 +5,11 @@ def has_digits(password):
         if letter.isdigit():
             return True
 
-    return False
+
+def has_letters(password):
+    for letter in password:
+        if letter.isalpha():
+            return True
 
 
 def is_very_long(password):
@@ -21,6 +25,9 @@ def main():
         score += 2
 
     if is_very_long(password):
+        score += 2
+
+    if has_letters(password):
         score += 2
 
     print(f'Рейтин пароля: {score}')
