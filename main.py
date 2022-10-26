@@ -18,6 +18,12 @@ def has_upper_letters(password):
             return True
 
 
+def has_lower_letters(password):
+    for letter in password:
+        if letter.islower():
+            return True
+
+
 def is_very_long(password):
     return len(password) > 12
 
@@ -37,6 +43,9 @@ def main():
         score += 2
 
     if has_upper_letters(password):
+        score += 2
+
+    if has_lower_letters(password):
         score += 2
 
     print(f'Рейтин пароля: {score}')
