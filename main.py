@@ -1,13 +1,11 @@
 
 
 def has_digits(password):
-    found_digits = False
     for letter in password:
         if letter.isdigit():
-            found_digits = True
-            break
+            return True
 
-    return found_digits
+    return False
 
 
 def is_very_long(password):
