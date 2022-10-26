@@ -24,6 +24,13 @@ def has_lower_letters(password):
             return True
 
 
+def has_symbols(password):
+    symbols = ".,:;!_*-+()/#%&"
+    for letter in password:
+        if letter in symbols:
+            return True
+
+
 def is_very_long(password):
     return len(password) > 12
 
@@ -36,7 +43,8 @@ def main():
         is_very_long,
         has_letters,
         has_upper_letters,
-        has_lower_letters
+        has_lower_letters,
+        has_symbols
     ]
 
     score = 0
