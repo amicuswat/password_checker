@@ -8,11 +8,16 @@ def main():
     else:
         print('Короткий')
 
+    found_digits = False
     for letter in password:
         if letter.isdigit():
-            print(f'{letter} - Цифра')
-        else:
-            print(f'{letter} - Буква')
+            found_digits = True
+            break
+
+    if found_digits:
+        print('Есть цифры')
+    else:
+        print('Нет цифр')
 
 
 if __name__ == "__main__":
