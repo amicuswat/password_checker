@@ -1,27 +1,19 @@
 
 
 def has_digits(password):
-    for letter in password:
-        if letter.isdigit():
-            return True
+    return any(letter.isdigit() for letter in password)
 
 
 def has_letters(password):
-    for letter in password:
-        if letter.isalpha():
-            return True
+    return any(letter.isalpha() for letter in password)
 
 
 def has_upper_letters(password):
-    for letter in password:
-        if letter.isupper():
-            return True
+    return any(letter.isupper() for letter in password)
 
 
 def has_lower_letters(password):
-    for letter in password:
-        if letter.islower():
-            return True
+    return any(letter.islower() for letter in password)
 
 
 def has_symbols(password):
